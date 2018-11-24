@@ -26,5 +26,7 @@ def get_template(filename):
        content = template_file.read()
    return Template(content)
 
-server = smtplib.SMTP(host='smtp.gmail.com', port='587')
-server.starttls()
+def start_email_server(user, password):
+    server = smtplib.SMTP(host='smtp.gmail.com', port='587')
+    server.starttls()
+    server.login(user, password)
