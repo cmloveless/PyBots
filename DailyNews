@@ -11,24 +11,20 @@ for submission in subreddit.hot(limit=15):
     #pprint.pprint(vars(submission))
     print(submission.url)
     print('-----------------------------------------------------')
-#
-#def get_contacts(filename):
-#   names = []
-#   emails = []
-#   with open(filename, mode = 'r', encoding = 'utf-8') as contacts:
-#       for a_contact in contacts:
-#           names.append(a_contact.split()[0]
-#           emails.append(a_contact.split()[1]
-#       return names, emails
 
-#def get_template(filename):
-#   with open(filename, mode='r', encoding='utf-8') as template_file:
-#       content = template_file.read()
-#   return Template(content)
-#
-#server = smtplib.SMTP(host='smtp.gmail.com', port='587')
-#server.starttls()
-#
-#
-#
-#
+def get_contacts(filename):
+   names = []
+   emails = []
+   with open(filename, mode = 'r', encoding = 'utf-8') as contacts:
+       for a_contact in contacts:
+           names.append(a_contact.split()[0]
+           emails.append(a_contact.split()[1]
+       return names, emails
+
+def get_template(filename):
+   with open(filename, mode='r', encoding='utf-8') as template_file:
+       content = template_file.read()
+   return Template(content)
+
+server = smtplib.SMTP(host='smtp.gmail.com', port='587')
+server.starttls()
